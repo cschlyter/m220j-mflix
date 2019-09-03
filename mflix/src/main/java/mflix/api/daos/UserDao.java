@@ -65,9 +65,6 @@ public class UserDao extends AbstractMFlixDao {
     }
     usersCollection.withWriteConcern(WriteConcern.MAJORITY).insertOne(user);
     return true;
-    //TODO > Ticket: Handling Errors - make sure to only add new users
-    // and not users that already exist.
-
   }
 
   /**
