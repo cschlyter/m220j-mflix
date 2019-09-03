@@ -116,8 +116,6 @@ public class UserDao extends AbstractMFlixDao {
    * @return true if user successfully removed
    */
   public boolean deleteUser(String email) {
-    // remove user sessions
-    //TODO> Ticket: User Management - implement the delete user method
     //TODO > Ticket: Handling Errors - make this method more robust by
     // handling potential exceptions.
     deleteUserSessions(email);

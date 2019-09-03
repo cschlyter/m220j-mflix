@@ -2,39 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da8adc05-ee5b-4a43-a8f2-270ebcf17acc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/CommentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/Migrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/Migrator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/AbstractMFlixDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/AbstractMFlixDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDocumentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDocumentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/MoviesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/MoviesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/TokenAuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/TokenAuthenticationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/ConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/ConnectionTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/GetCommentsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/GetCommentsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/ProjectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/ProjectionTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/TextAndSubfieldTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/TextAndSubfieldTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UpdateCreateCommentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UpdateCreateCommentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/AbstractLesson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/AbstractLesson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/ChangeStreams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/ChangeStreams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/CursorMethodsAndAggEquivalents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/CursorMethodsAndAggEquivalents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/ErrorHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/ErrorHandling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/MongoClientLesson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/MongoClientLesson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/UsingAggregationBuilders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/UsingAggregationBuilders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/utils/ActorCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/utils/ActorCodec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/utils/ChangeStreamsInsertAndUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/utils/ChangeStreamsInsertAndUpdate.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +38,29 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="UpdateCreateCommentTest.testUserUpdatesOwnComments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mflix" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mflix.api.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mflix.api.daos" />
+      <option name="MAIN_CLASS_NAME" value="mflix.api.daos.UpdateCreateCommentTest" />
+      <option name="METHOD_NAME" value="testUserUpdatesOwnComments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UpdateCreateCommentTest.testUserUpdatesOwnComments" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -85,7 +79,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
