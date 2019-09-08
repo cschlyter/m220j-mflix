@@ -3,6 +3,8 @@ package mflix.api.daos;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoWriteException;
 import com.mongodb.ReadConcern;
+import com.mongodb.WriteConcern;
+import com.mongodb.client.AggregateIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Aggregates;
@@ -26,9 +28,12 @@ import org.springframework.stereotype.Component;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import static com.mongodb.client.model.Aggregates.group;
+import static com.mongodb.client.model.Updates.set;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
@@ -80,11 +85,18 @@ public class CommentDao extends AbstractMFlixDao {
    */
   public Comment addComment(Comment comment) {
 
-    // TODO> Ticket - Update User reviews: implement the functionality that enables adding a new
-    // comment.
-    // TODO> Ticket - Handling Errors: Implement a try catch block to
-    // handle a potential write exception when given a wrong commentId.
-    return null;
+    if (comment.getId() == null) {
+      throw new IncorrectDaoOperation("No id.");
+    }
+
+    try {
+      commentCollection.insertOne(comment);
+      return comment;
+    }
+    catch (Exception e) {
+      throw new IncorrectDaoOperation("Problem inserting.");
+    }
+
   }
 
   /**
@@ -102,11 +114,20 @@ public class CommentDao extends AbstractMFlixDao {
    */
   public boolean updateComment(String commentId, String text, String email) {
 
-    // TODO> Ticket - Update User reviews: implement the functionality that enables updating an
-    // user own comments
-    // TODO> Ticket - Handling Errors: Implement a try catch block to
-    // handle a potential write exception when given a wrong commentId.
-    return false;
+    try {
+      Document query = new Document("_id", new ObjectId(commentId));
+      query.append("email", email);
+      UpdateResult result = commentCollection.updateOne(query, set("text", text));
+
+      if (result.getModifiedCount() > 0) {
+        return true;
+      }
+      return false;
+    }
+    catch (Exception e) {
+      return false;
+    }
+
   }
 
   /**
@@ -117,12 +138,25 @@ public class CommentDao extends AbstractMFlixDao {
    * @return true if successful deletes the comment.
    */
   public boolean deleteComment(String commentId, String email) {
-    // TODO> Ticket Delete Comments - Implement the method that enables the deletion of a user
-    // comment
-    // TIP: make sure to match only users that own the given commentId
-    // TODO> Ticket Handling Errors - Implement a try catch block to
-    // handle a potential write exception when given a wrong commentId.
-    return false;
+
+    if (commentId == null || commentId == "") {
+      throw new IllegalArgumentException("Null commentId");
+    }
+
+    try {
+      Document query = new Document("_id", new ObjectId(commentId));
+      query.append("email", email);
+      DeleteResult deleteResult = commentCollection.deleteOne(query);
+
+      if (deleteResult.getDeletedCount() > 0) {
+        return true;
+      }
+
+      return false;
+    }
+    catch (Exception e) {
+      return false;
+    }
   }
 
   /**
@@ -134,12 +168,23 @@ public class CommentDao extends AbstractMFlixDao {
    */
   public List<Critic> mostActiveCommenters() {
     List<Critic> mostActive = new ArrayList<>();
-    // // TODO> Ticket: User Report - execute a command that returns the
+    // Ticket: User Report - execute a command that returns the
     // // list of 20 users, group by number of comments. Don't forget,
     // // this report is expected to be produced with an high durability
     // // guarantee for the returned documents. Once a commenter is in the
     // // top 20 of users, they become a Critic, so mostActive is composed of
     // // Critic objects.
+
+    List<Bson> pipeline = Arrays.asList(new Document("$group",
+                    new Document("_id", "$email")
+                            .append("count",
+                                    new Document("$sum", 1L))),
+            new Document("$sort",
+                    new Document("count", -1L)),
+            new Document("$limit", 20L));
+
+    commentCollection.withWriteConcern(WriteConcern.MAJORITY).aggregate(pipeline, Critic.class).into(mostActive);
+
     return mostActive;
   }
 }
